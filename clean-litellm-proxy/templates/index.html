@@ -1,0 +1,219 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>OpenHands LiteLLM Proxy</title>
+            <link rel="stylesheet" href="/static/styles.css">
+        </head>
+        <body>
+            <header>
+                <div class="container">
+                    <h1>OpenHands LiteLLM Proxy</h1>
+                </div>
+            </header>
+            <div class="container">
+                {% if message %}
+                <div class="alert alert-{{ message_type }}">
+                    {{ message }}
+                </div>
+                {% endif %}
+                
+                <div class="tabs">
+                    <div class="tab active" onclick="openTab(event, 'dashboard')">Dashboard</div>
+                    <div class="tab" onclick="openTab(event, 'config')">Configuration</div>
+                    <div class="tab" onclick="openTab(event, 'keys')">API Keys</div>
+                    <div class="tab" onclick="openTab(event, 'logs')">Logs</div>
+                </div>
+                
+                <div id="dashboard" class="tab-content active">
+                    <div class="card">
+                        <h2>Status</h2>
+                        <p>Server is <span class="badge badge-success">Running</span></p>
+                        <p>Available Models: 
+                            {% for model in models %}
+                            <span class="badge badge-success">{{ model }}</span>
+                            {% endfor %}
+                        </p>
+                    </div>
+                    
+                    <div class="card">
+                        <h2>Test Connection</h2>
+                        <form action="/test-connection" method="post">
+                            <div class="form-group">
+                                <label for="model">Model</label>
+                                <select name="model" id="model">
+                                    {% for model in models %}
+                                    <option value="{{ model }}">{{ model }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="prompt">Test Prompt</label>
+                                <textarea name="prompt" id="prompt" rows="3">Hello, how are you today?</textarea>
+                            </div>
+                            <button type="submit">Test Connection</button>
+                        </form>
+                    </div>
+                    
+                    {% if test_result %}
+                    <div class="card">
+                        <h2>Test Result</h2>
+                        <div class="alert alert-{{ test_result.status }}">
+                            {{ test_result.message }}
+                        </div>
+                        {% if test_result.response %}
+                        <div class="code-block">
+                            {{ test_result.response }}
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <div id="config" class="tab-content">
+                    <div class="card">
+                        <h2>Provider Configuration</h2>
+                        <form action="/update-config" method="post">
+                            <h3>Azure Configuration</h3>
+                            <div class="form-group">
+                                <label for="azure_api_base">Azure API Base</label>
+                                <input type="text" name="azure_api_base" id="azure_api_base" value="{{ config.azure_api_base or '' }}">
+                            </div>
+                            <div class="form-group">
+                                <label for="azure_api_key">Azure API Key</label>
+                                <input type="password" name="azure_api_key" id="azure_api_key" value="{{ config.azure_api_key or '' }}">
+                            </div>
+                            <div class="form-group">
+                                <label for="azure_api_version">Azure API Version</label>
+                                <input type="text" name="azure_api_version" id="azure_api_version" value="{{ config.azure_api_version or '2023-07-01-preview' }}">
+                            </div>
+                            
+                            <h3>Anthropic Configuration</h3>
+                            <div class="form-group">
+                                <label for="anthropic_api_key">Anthropic API Key</label>
+                                <input type="password" name="anthropic_api_key" id="anthropic_api_key" value="{{ config.anthropic_api_key or '' }}">
+                            </div>
+                            
+                            <h3>OpenAI Configuration (Optional)</h3>
+                            <div class="form-group">
+                                <label for="openai_api_key">OpenAI API Key</label>
+                                <input type="password" name="openai_api_key" id="openai_api_key" value="{{ config.openai_api_key or '' }}">
+                            </div>
+                            
+                            <button type="submit">Save Configuration</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div id="keys" class="tab-content">
+                    <div class="card">
+                        <h2>API Keys</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>API Key</th>
+                                    <th>Models</th>
+                                    <th>Created</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for key in api_keys %}
+                                <tr>
+                                    <td>{{ key.name }}</td>
+                                    <td><code>{{ key.key }}</code></td>
+                                    <td>
+                                        {% for model in key.models %}
+                                        <span class="badge badge-success">{{ model }}</span>
+                                        {% endfor %}
+                                    </td>
+                                    <td>{{ key.created }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="card">
+                        <h2>Create New API Key</h2>
+                        <form action="/create-key" method="post">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name" placeholder="e.g., openhands-instance-1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Description (Optional)</label>
+                                <input type="text" name="description" id="description" placeholder="e.g., OpenHands instance for marketing team">
+                            </div>
+                            <div class="form-group">
+                                <label>Allowed Models</label>
+                                {% for model in models %}
+                                <div>
+                                    <input type="checkbox" name="models" id="model-{{ model }}" value="{{ model }}" checked>
+                                    <label for="model-{{ model }}">{{ model }}</label>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <button type="submit">Create API Key</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div id="logs" class="tab-content">
+                    <div class="card">
+                        <h2>Server Logs</h2>
+                        <div class="logs" id="log-container">
+                            {% for log in logs %}
+                            <div class="log-entry">
+                                <span class="log-time">{{ log.time }}</span>
+                                <span class="log-level-{{ log.level }}">{{ log.level }}</span>
+                                <span class="log-message">{{ log.message }}</span>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <button onclick="refreshLogs()">Refresh Logs</button>
+                    </div>
+                </div>
+            </div>
+            
+            <script>
+                function openTab(evt, tabName) {
+                    var i, tabcontent, tablinks;
+                    tabcontent = document.getElementsByClassName("tab-content");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].className = tabcontent[i].className.replace(" active", "");
+                    }
+                    tablinks = document.getElementsByClassName("tab");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }
+                    document.getElementById(tabName).className += " active";
+                    evt.currentTarget.className += " active";
+                }
+                
+                function refreshLogs() {
+                    fetch('/api/logs')
+                        .then(response => response.json())
+                        .then(data => {
+                            const logContainer = document.getElementById('log-container');
+                            logContainer.innerHTML = '';
+                            data.forEach(log => {
+                                logContainer.innerHTML += `
+                                <div class="log-entry">
+                                    <span class="log-time">${log.time}</span>
+                                    <span class="log-level-${log.level}">${log.level}</span>
+                                    <span class="log-message">${log.message}</span>
+                                </div>
+                                `;
+                            });
+                        });
+                }
+                
+                // Auto-refresh logs every 10 seconds
+                setInterval(refreshLogs, 10000);
+            </script>
+        </body>
+        </html>
+        

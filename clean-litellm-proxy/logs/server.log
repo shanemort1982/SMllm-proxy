@@ -1,0 +1,84 @@
+Starting OpenHands LiteLLM Proxy on port 54658...
+Available models: gpt-3.5-turbo, gpt-4, claude-3-opus
+INFO:     Started server process [1926]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:54658 (Press CTRL+C to quit)
+Request: gpt-3.5-turbo from openhands-test
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+Error: litellm.APIConnectionError: AzureException APIConnectionError - Connection error.
+INFO:     127.0.0.1:43200 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1926]
+2025-03-15 09:30:50,536 - openhands-litellm-proxy - INFO - Starting OpenHands LiteLLM Proxy on port 54658...
+2025-03-15 09:30:50,537 - openhands-litellm-proxy - INFO - Available models: gpt-3.5-turbo, gpt-4, claude-3-opus
+2025-03-15 09:30:50,537 - openhands-litellm-proxy - INFO - Web UI available at http://localhost:54658
+2025-03-15 09:32:04,662 - openhands-litellm-proxy - INFO - Starting OpenHands LiteLLM Proxy on port 54658...
+2025-03-15 09:32:04,662 - openhands-litellm-proxy - INFO - Available models: gpt-3.5-turbo, gpt-4, claude-3-opus
+2025-03-15 09:32:04,662 - openhands-litellm-proxy - INFO - Web UI available at http://localhost:54658
+2025-03-15 09:32:45,885 - openhands-litellm-proxy - INFO - API key created: openhands-test-instance
+Sat Mar 15 09:33:06 UTC 2025: Server stopped by user
+2025-03-15 09:35:44,106 - openhands-litellm-proxy - INFO - Starting OpenHands LiteLLM Proxy on port 54658...
+2025-03-15 09:35:44,106 - openhands-litellm-proxy - INFO - Available models: gpt-3.5-turbo, gpt-4, claude-3-opus
+2025-03-15 09:35:44,106 - openhands-litellm-proxy - INFO - Web UI available at http://localhost:54658
+2025-03-15 09:37:52,285 - openhands-litellm-proxy - INFO - Starting OpenHands LiteLLM Proxy on port 54658...
+2025-03-15 09:37:52,285 - openhands-litellm-proxy - INFO - Available models: gpt-3.5-turbo, gpt-4, claude-3-opus
+2025-03-15 09:37:52,285 - openhands-litellm-proxy - INFO - Web UI available at http://localhost:54658
+2025-03-15 09:39:23,743 - openhands-litellm-proxy - INFO - Configuration updated
+2025-03-15 09:39:29,467 - openhands-litellm-proxy - INFO - Testing connection to gpt-3.5-turbo
+2025-03-15 09:39:29,474 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-35-turbo; provider = azure
+2025-03-15 09:39:29,488 - openai._base_client - INFO - Retrying request to /chat/completions in 0.457286 seconds
+2025-03-15 09:39:29,946 - openai._base_client - INFO - Retrying request to /chat/completions in 0.851937 seconds
+2025-03-15 09:39:30,811 - openhands-litellm-proxy - ERROR - Connection test failed: litellm.APIConnectionError: AzureException APIConnectionError - Connection error.
+2025-03-15 09:39:36,041 - openhands-litellm-proxy - INFO - Testing connection to claude-3-opus
+2025-03-15 09:39:36,042 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-3-opus-20240229; provider = anthropic
+2025-03-15 09:39:38,400 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-15 09:39:38,402 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 09:39:38,404 - openhands-litellm-proxy - INFO - Connection test successful: claude-3-opus
+2025-03-15 09:41:51,067 - openhands-litellm-proxy - INFO - Testing connection to gpt-3.5-turbo
+2025-03-15 09:41:51,068 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-35-turbo; provider = azure
+2025-03-15 09:41:51,081 - openai._base_client - INFO - Retrying request to /chat/completions in 0.453767 seconds
+2025-03-15 09:41:51,537 - openai._base_client - INFO - Retrying request to /chat/completions in 0.831136 seconds
+2025-03-15 09:41:52,376 - openhands-litellm-proxy - ERROR - Connection test failed: litellm.APIConnectionError: AzureException APIConnectionError - Connection error.
+2025-03-15 09:41:56,609 - openhands-litellm-proxy - INFO - Testing connection to gpt-4
+2025-03-15 09:41:56,610 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4; provider = azure
+2025-03-15 09:41:56,648 - openai._base_client - INFO - Retrying request to /chat/completions in 0.423378 seconds
+2025-03-15 09:41:57,073 - openai._base_client - INFO - Retrying request to /chat/completions in 0.876971 seconds
+2025-03-15 09:41:57,958 - openhands-litellm-proxy - ERROR - Connection test failed: litellm.APIConnectionError: AzureException APIConnectionError - Connection error.
+2025-03-15 09:42:00,854 - openhands-litellm-proxy - INFO - Testing connection to claude-3-opus
+2025-03-15 09:42:00,855 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-3-opus-20240229; provider = anthropic
+2025-03-15 09:42:02,968 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-15 09:42:02,969 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 09:42:02,970 - openhands-litellm-proxy - INFO - Connection test successful: claude-3-opus
+2025-03-15 09:42:13,181 - openhands-litellm-proxy - INFO - Testing connection to gpt-3.5-turbo
+2025-03-15 09:42:13,182 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-35-turbo; provider = azure
+2025-03-15 09:42:13,195 - openai._base_client - INFO - Retrying request to /chat/completions in 0.454826 seconds
+2025-03-15 09:42:13,651 - openai._base_client - INFO - Retrying request to /chat/completions in 0.968276 seconds
+2025-03-15 09:42:14,627 - openhands-litellm-proxy - ERROR - Connection test failed: litellm.APIConnectionError: AzureException APIConnectionError - Connection error.
+2025-03-15 09:42:18,016 - openhands-litellm-proxy - INFO - Testing connection to claude-3-opus
+2025-03-15 09:42:18,017 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-3-opus-20240229; provider = anthropic
+2025-03-15 09:42:19,984 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-15 09:42:19,986 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 09:42:19,987 - openhands-litellm-proxy - INFO - Connection test successful: claude-3-opus
+2025-03-15 09:42:29,570 - openhands-litellm-proxy - INFO - Testing connection to claude-3-opus
+2025-03-15 09:42:29,571 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-3-opus-20240229; provider = anthropic
+2025-03-15 09:42:33,708 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-15 09:42:33,710 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 09:42:33,711 - openhands-litellm-proxy - INFO - Connection test successful: claude-3-opus
+Sat Mar 15 09:43:05 UTC 2025: Server stopped by user
+2025-03-15 09:43:08,924 - openhands-litellm-proxy - INFO - Starting OpenHands LiteLLM Proxy on port 54658...
+2025-03-15 09:43:08,925 - openhands-litellm-proxy - INFO - Available models: gpt-3.5-turbo, gpt-4, gpt-4-turbo, claude-3-opus, claude-3-sonnet, claude-3-haiku
+2025-03-15 09:43:08,925 - openhands-litellm-proxy - INFO - Web UI available at http://localhost:54658

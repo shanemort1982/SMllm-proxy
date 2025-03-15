@@ -1,0 +1,12 @@
+{
+  "sk-openhands-test-instance-c3fd707da97d": {
+    "name": "openhands-test-instance",
+    "description": "Test instance for OpenHands",
+    "models": [
+      "gpt-3.5-turbo",
+      "gpt-4",
+      "claude-3-opus"
+    ],
+    "created": "2025-03-15 09:32:45"
+  }
+}

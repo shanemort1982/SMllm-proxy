@@ -1,0 +1,178 @@
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f5f7fa;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #4F46E5;
+            color: white;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+        h1, h2, h3 {
+            color: #2D3748;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        input[type="text"], input[type="password"], textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4F46E5;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #4338CA;
+        }
+        .alert {
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .alert-success {
+            background-color: #D1FAE5;
+            border: 1px solid #10B981;
+            color: #047857;
+        }
+        .alert-danger {
+            background-color: #FEE2E2;
+            border: 1px solid #EF4444;
+            color: #B91C1C;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f8fafc;
+            font-weight: 600;
+        }
+        tr:hover {
+            background-color: #f1f5f9;
+        }
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .badge-success {
+            background-color: #D1FAE5;
+            color: #047857;
+        }
+        .badge-warning {
+            background-color: #FEF3C7;
+            color: #92400E;
+        }
+        .badge-danger {
+            background-color: #FEE2E2;
+            color: #B91C1C;
+        }
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-right: 5px;
+            border-radius: 4px 4px 0 0;
+        }
+        .tab.active {
+            background-color: #4F46E5;
+            color: white;
+            border: 1px solid #4F46E5;
+            border-bottom: none;
+        }
+        .tab:not(.active) {
+            background-color: #f8fafc;
+            border: 1px solid #ddd;
+            border-bottom: none;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .code-block {
+            background-color: #1E293B;
+            color: #E2E8F0;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: monospace;
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+        .logs {
+            background-color: #1E293B;
+            color: #E2E8F0;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: monospace;
+            height: 300px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+        }
+        .log-entry {
+            margin-bottom: 5px;
+            border-bottom: 1px solid #2D3748;
+            padding-bottom: 5px;
+        }
+        .log-time {
+            color: #9CA3AF;
+            margin-right: 10px;
+        }
+        .log-level-info {
+            color: #60A5FA;
+        }
+        .log-level-error {
+            color: #F87171;
+        }
+        .log-level-warning {
+            color: #FBBF24;
+        }
+        .log-message {
+            color: #E2E8F0;
+        }
+        

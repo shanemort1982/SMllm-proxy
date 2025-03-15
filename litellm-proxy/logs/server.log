@@ -1,0 +1,487 @@
+Starting OpenHands LiteLLM Proxy on port 54658...
+Available models: gpt-3.5-turbo, gpt-4, claude-3-opus
+INFO:     Started server process [1926]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:54658 (Press CTRL+C to quit)
+Request: gpt-3.5-turbo from openhands-test
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+Error: litellm.APIConnectionError: AzureException APIConnectionError - Connection error.
+INFO:     127.0.0.1:43200 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1926]
+2025-03-15 09:30:50,536 - openhands-litellm-proxy - INFO - Starting OpenHands LiteLLM Proxy on port 54658...
+2025-03-15 09:30:50,537 - openhands-litellm-proxy - INFO - Available models: gpt-3.5-turbo, gpt-4, claude-3-opus
+2025-03-15 09:30:50,537 - openhands-litellm-proxy - INFO - Web UI available at http://localhost:54658
+2025-03-15 09:32:04,662 - openhands-litellm-proxy - INFO - Starting OpenHands LiteLLM Proxy on port 54658...
+2025-03-15 09:32:04,662 - openhands-litellm-proxy - INFO - Available models: gpt-3.5-turbo, gpt-4, claude-3-opus
+2025-03-15 09:32:04,662 - openhands-litellm-proxy - INFO - Web UI available at http://localhost:54658
+2025-03-15 09:32:45,885 - openhands-litellm-proxy - INFO - API key created: openhands-test-instance
+Sat Mar 15 09:33:06 UTC 2025: Server stopped by user
+2025-03-15 09:35:44,106 - openhands-litellm-proxy - INFO - Starting OpenHands LiteLLM Proxy on port 54658...
+2025-03-15 09:35:44,106 - openhands-litellm-proxy - INFO - Available models: gpt-3.5-turbo, gpt-4, claude-3-opus
+2025-03-15 09:35:44,106 - openhands-litellm-proxy - INFO - Web UI available at http://localhost:54658
+2025-03-15 09:37:52,285 - openhands-litellm-proxy - INFO - Starting OpenHands LiteLLM Proxy on port 54658...
+2025-03-15 09:37:52,285 - openhands-litellm-proxy - INFO - Available models: gpt-3.5-turbo, gpt-4, claude-3-opus
+2025-03-15 09:37:52,285 - openhands-litellm-proxy - INFO - Web UI available at http://localhost:54658
+2025-03-15 09:39:23,743 - openhands-litellm-proxy - INFO - Configuration updated
+2025-03-15 09:39:29,467 - openhands-litellm-proxy - INFO - Testing connection to gpt-3.5-turbo
+2025-03-15 09:39:29,474 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-35-turbo; provider = azure
+2025-03-15 09:39:29,488 - openai._base_client - INFO - Retrying request to /chat/completions in 0.457286 seconds
+2025-03-15 09:39:29,946 - openai._base_client - INFO - Retrying request to /chat/completions in 0.851937 seconds
+2025-03-15 09:39:30,811 - openhands-litellm-proxy - ERROR - Connection test failed: litellm.APIConnectionError: AzureException APIConnectionError - Connection error.
+2025-03-15 09:39:36,041 - openhands-litellm-proxy - INFO - Testing connection to claude-3-opus
+2025-03-15 09:39:36,042 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-3-opus-20240229; provider = anthropic
+2025-03-15 09:39:38,400 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-15 09:39:38,402 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 09:39:38,404 - openhands-litellm-proxy - INFO - Connection test successful: claude-3-opus
+2025-03-15 09:41:51,067 - openhands-litellm-proxy - INFO - Testing connection to gpt-3.5-turbo
+2025-03-15 09:41:51,068 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-35-turbo; provider = azure
+2025-03-15 09:41:51,081 - openai._base_client - INFO - Retrying request to /chat/completions in 0.453767 seconds
+2025-03-15 09:41:51,537 - openai._base_client - INFO - Retrying request to /chat/completions in 0.831136 seconds
+2025-03-15 09:41:52,376 - openhands-litellm-proxy - ERROR - Connection test failed: litellm.APIConnectionError: AzureException APIConnectionError - Connection error.
+2025-03-15 09:41:56,609 - openhands-litellm-proxy - INFO - Testing connection to gpt-4
+2025-03-15 09:41:56,610 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4; provider = azure
+2025-03-15 09:41:56,648 - openai._base_client - INFO - Retrying request to /chat/completions in 0.423378 seconds
+2025-03-15 09:41:57,073 - openai._base_client - INFO - Retrying request to /chat/completions in 0.876971 seconds
+2025-03-15 09:41:57,958 - openhands-litellm-proxy - ERROR - Connection test failed: litellm.APIConnectionError: AzureException APIConnectionError - Connection error.
+2025-03-15 09:42:00,854 - openhands-litellm-proxy - INFO - Testing connection to claude-3-opus
+2025-03-15 09:42:00,855 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-3-opus-20240229; provider = anthropic
+2025-03-15 09:42:02,968 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-15 09:42:02,969 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 09:42:02,970 - openhands-litellm-proxy - INFO - Connection test successful: claude-3-opus
+2025-03-15 09:42:13,181 - openhands-litellm-proxy - INFO - Testing connection to gpt-3.5-turbo
+2025-03-15 09:42:13,182 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-35-turbo; provider = azure
+2025-03-15 09:42:13,195 - openai._base_client - INFO - Retrying request to /chat/completions in 0.454826 seconds
+2025-03-15 09:42:13,651 - openai._base_client - INFO - Retrying request to /chat/completions in 0.968276 seconds
+2025-03-15 09:42:14,627 - openhands-litellm-proxy - ERROR - Connection test failed: litellm.APIConnectionError: AzureException APIConnectionError - Connection error.
+2025-03-15 09:42:18,016 - openhands-litellm-proxy - INFO - Testing connection to claude-3-opus
+2025-03-15 09:42:18,017 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-3-opus-20240229; provider = anthropic
+2025-03-15 09:42:19,984 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-15 09:42:19,986 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 09:42:19,987 - openhands-litellm-proxy - INFO - Connection test successful: claude-3-opus
+2025-03-15 09:42:29,570 - openhands-litellm-proxy - INFO - Testing connection to claude-3-opus
+2025-03-15 09:42:29,571 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-3-opus-20240229; provider = anthropic
+2025-03-15 09:42:33,708 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-15 09:42:33,710 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 09:42:33,711 - openhands-litellm-proxy - INFO - Connection test successful: claude-3-opus
+Sat Mar 15 09:43:05 UTC 2025: Server stopped by user
+2025-03-15 09:43:08,924 - openhands-litellm-proxy - INFO - Starting OpenHands LiteLLM Proxy on port 54658...
+2025-03-15 09:43:08,925 - openhands-litellm-proxy - INFO - Available models: gpt-3.5-turbo, gpt-4, gpt-4-turbo, claude-3-opus, claude-3-sonnet, claude-3-haiku
+2025-03-15 09:43:08,925 - openhands-litellm-proxy - INFO - Web UI available at http://localhost:54658
+2025-03-15 13:15:00,250 - openhands-litellm-proxy - INFO - Starting OpenHands LiteLLM Proxy on port 54658...
+2025-03-15 13:15:00,250 - openhands-litellm-proxy - INFO - Available models: claude-3-opus, claude-3-sonnet, claude-3-haiku, gpt-4o, gpt-4-turbo, gpt-4, gpt-3.5-turbo
+2025-03-15 13:15:00,250 - openhands-litellm-proxy - INFO - Web UI available at http://localhost:54658
+2025-03-15 13:19:11,675 - openhands-litellm-proxy - INFO - Starting OpenHands LiteLLM Proxy on port 54658...
+2025-03-15 13:19:11,675 - openhands-litellm-proxy - INFO - Available models: claude-3-opus, claude-3-sonnet, claude-3-haiku, gpt-4o, gpt-4-turbo, gpt-4, gpt-3.5-turbo
+2025-03-15 13:19:11,676 - openhands-litellm-proxy - INFO - Web UI available at http://localhost:54658
+2025-03-15 13:21:22,124 - openhands-litellm-proxy - INFO - Starting OpenHands LiteLLM Proxy on port 54658...
+2025-03-15 13:21:22,125 - openhands-litellm-proxy - INFO - Available models: claude-3-opus, claude-3-sonnet, claude-3-haiku, gpt-4o, gpt-4-turbo, gpt-4, gpt-3.5-turbo
+2025-03-15 13:21:22,125 - openhands-litellm-proxy - INFO - Web UI available at http://localhost:54658
+2025-03-15 13:30:02,726 - openhands-litellm-proxy - INFO - Testing connection to claude-3-opus
+2025-03-15 13:30:02,736 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-3-opus-20240229; provider = anthropic
+2025-03-15 13:30:04,753 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-15 13:30:04,755 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 13:30:04,756 - openhands-litellm-proxy - INFO - Connection test successful: claude-3-opus
+Sat Mar 15 13:32:54 UTC 2025: Server stopped by user
+2025-03-15 13:38:20,596 - openhands-litellm-proxy - INFO - Starting OpenHands LiteLLM Proxy on port 54658...
+2025-03-15 13:38:20,596 - openhands-litellm-proxy - INFO - Available models: claude-3-opus, claude-3-sonnet, claude-3-haiku, gpt-4o, gpt-4-turbo, gpt-4, gpt-3.5-turbo
+2025-03-15 13:38:20,596 - openhands-litellm-proxy - INFO - Web UI available at http://localhost:54658
+2025-03-15 13:38:20,614 - openhands-litellm-proxy - INFO - Server starting up, fetching available models...
+2025-03-15 13:38:20,614 - openhands-litellm-proxy - INFO - Fetching available Anthropic models...
+2025-03-15 13:38:20,614 - openhands-litellm-proxy - INFO - Found 9 Anthropic models
+2025-03-15 13:38:20,614 - openhands-litellm-proxy - INFO - Fetching available OpenAI models...
+2025-03-15 13:38:22,015 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2025-03-15 13:38:22,018 - openhands-litellm-proxy - INFO - Found 36 OpenAI models
+2025-03-15 13:38:22,018 - openhands-litellm-proxy - INFO - Updated model configuration with 42 discovered models
+2025-03-15 13:40:27,609 - openhands-litellm-proxy - INFO - Starting OpenHands LiteLLM Proxy on port 54658...
+2025-03-15 13:40:27,609 - openhands-litellm-proxy - INFO - Available models: claude-3-opus, claude-3-sonnet, claude-3-haiku, gpt-4o, gpt-4-turbo, gpt-4, gpt-3.5-turbo
+2025-03-15 13:40:27,609 - openhands-litellm-proxy - INFO - Web UI available at http://localhost:54658
+2025-03-15 13:40:27,627 - openhands-litellm-proxy - INFO - Server starting up, fetching available models...
+2025-03-15 13:40:27,627 - openhands-litellm-proxy - INFO - Fetching available Anthropic models...
+2025-03-15 13:40:27,627 - openhands-litellm-proxy - INFO - Found 9 Anthropic models
+2025-03-15 13:40:27,627 - openhands-litellm-proxy - INFO - Fetching available OpenAI models...
+2025-03-15 13:40:28,182 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2025-03-15 13:40:28,187 - openhands-litellm-proxy - INFO - Found 36 OpenAI models
+2025-03-15 13:40:28,187 - openhands-litellm-proxy - INFO - Updated model configuration with 42 discovered models
+2025-03-15 13:41:06,645 - openhands-litellm-proxy - INFO - Configuration updated
+2025-03-15 13:41:06,646 - openhands-litellm-proxy - INFO - Fetching available Anthropic models...
+2025-03-15 13:41:06,647 - openhands-litellm-proxy - INFO - Found 9 Anthropic models
+2025-03-15 13:41:06,647 - openhands-litellm-proxy - INFO - Fetching available OpenAI models...
+2025-03-15 13:41:07,159 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2025-03-15 13:41:07,161 - openhands-litellm-proxy - INFO - Found 36 OpenAI models
+2025-03-15 13:41:07,161 - openhands-litellm-proxy - INFO - Updated model configuration with 42 discovered models
+2025-03-15 13:41:10,969 - openhands-litellm-proxy - INFO - Configuration updated
+2025-03-15 13:41:10,970 - openhands-litellm-proxy - INFO - Fetching available Anthropic models...
+2025-03-15 13:41:10,970 - openhands-litellm-proxy - INFO - Found 9 Anthropic models
+2025-03-15 13:41:10,970 - openhands-litellm-proxy - INFO - Fetching available OpenAI models...
+2025-03-15 13:41:11,617 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2025-03-15 13:41:11,620 - openhands-litellm-proxy - INFO - Found 36 OpenAI models
+2025-03-15 13:41:11,620 - openhands-litellm-proxy - INFO - Updated model configuration with 42 discovered models
+2025-03-15 13:41:23,444 - openhands-litellm-proxy - INFO - Testing connection to claude-3-opus
+2025-03-15 13:41:23,453 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-3-opus-20240229; provider = anthropic
+2025-03-15 13:41:25,430 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-15 13:41:25,433 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 13:41:25,435 - openhands-litellm-proxy - INFO - Connection test successful: claude-3-opus
+Sat Mar 15 13:42:41 UTC 2025: Server stopped by user
+2025-03-15 13:43:29,234 - openhands-litellm-proxy - INFO - Starting OpenHands LiteLLM Proxy on port 54658...
+2025-03-15 13:43:29,235 - openhands-litellm-proxy - INFO - Available models: claude-3-opus, claude-3-sonnet, claude-3-haiku, gpt-4o, gpt-4-turbo, gpt-4, gpt-3.5-turbo
+2025-03-15 13:43:29,235 - openhands-litellm-proxy - INFO - Web UI available at http://localhost:54658
+2025-03-15 13:43:29,253 - openhands-litellm-proxy - INFO - Server starting up, fetching available models...
+2025-03-15 13:43:29,253 - openhands-litellm-proxy - INFO - Fetching available Anthropic models...
+2025-03-15 13:43:29,253 - openhands-litellm-proxy - INFO - Found 9 Anthropic models
+2025-03-15 13:43:29,253 - openhands-litellm-proxy - INFO - Fetching available OpenAI models...
+2025-03-15 13:43:29,869 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2025-03-15 13:43:29,872 - openhands-litellm-proxy - INFO - Found 36 OpenAI models
+2025-03-15 13:43:29,872 - openhands-litellm-proxy - INFO - Updated model configuration with 42 discovered models
+2025-03-15 13:45:30,252 - openhands-litellm-proxy - INFO - Testing connection to claude-3-sonnet
+2025-03-15 13:45:30,260 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-3-sonnet-20240229; provider = anthropic
+2025-03-15 13:45:30,485 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 404 Not Found"
+2025-03-15 13:45:30,493 - openhands-litellm-proxy - ERROR - Connection test failed: litellm.NotFoundError: AnthropicException - {"type":"error","error":{"type":"not_found_error","message":"model: claude-3-sonnet-20240229"}}
+2025-03-15 13:45:48,953 - openhands-litellm-proxy - INFO - Configuration updated
+2025-03-15 13:45:48,954 - openhands-litellm-proxy - INFO - Fetching available Anthropic models...
+2025-03-15 13:45:48,954 - openhands-litellm-proxy - INFO - Found 9 Anthropic models
+2025-03-15 13:45:48,955 - openhands-litellm-proxy - INFO - Fetching available OpenAI models...
+2025-03-15 13:45:49,658 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2025-03-15 13:45:49,661 - openhands-litellm-proxy - INFO - Found 36 OpenAI models
+2025-03-15 13:45:49,661 - openhands-litellm-proxy - INFO - Fetching available Gemini models...
+2025-03-15 13:45:49,661 - openhands-litellm-proxy - INFO - Found 4 Gemini models
+2025-03-15 13:45:49,661 - openhands-litellm-proxy - INFO - Updated model configuration with 46 discovered models
+2025-03-15 13:45:54,986 - openhands-litellm-proxy - INFO - Testing connection to claude-3-opus
+2025-03-15 13:45:54,987 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-3-opus-20240229; provider = anthropic
+2025-03-15 13:45:56,973 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-15 13:45:56,975 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 13:45:56,977 - openhands-litellm-proxy - INFO - Connection test successful: claude-3-opus
+2025-03-15 13:46:02,355 - openhands-litellm-proxy - INFO - Testing connection to claude-3-sonnet
+2025-03-15 13:46:02,356 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-3-sonnet-20240229; provider = anthropic
+2025-03-15 13:46:02,847 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 404 Not Found"
+2025-03-15 13:46:02,852 - openhands-litellm-proxy - ERROR - Connection test failed: litellm.NotFoundError: AnthropicException - {"type":"error","error":{"type":"not_found_error","message":"model: claude-3-sonnet-20240229"}}
+2025-03-15 13:46:05,954 - openhands-litellm-proxy - INFO - Testing connection to claude-3-haiku
+2025-03-15 13:46:05,955 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-3-haiku-20240307; provider = anthropic
+2025-03-15 13:46:06,644 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-15 13:46:06,645 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 13:46:06,646 - openhands-litellm-proxy - INFO - Connection test successful: claude-3-haiku
+2025-03-15 13:46:11,153 - openhands-litellm-proxy - INFO - Testing connection to gpt-4o
+2025-03-15 13:46:11,153 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o; provider = openai
+2025-03-15 13:46:12,296 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 13:46:12,306 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 13:46:12,306 - openhands-litellm-proxy - INFO - Connection test successful: gpt-4o
+2025-03-15 13:46:17,410 - openhands-litellm-proxy - INFO - Testing connection to gpt-4-turbo
+2025-03-15 13:46:17,411 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4-turbo; provider = openai
+2025-03-15 13:46:18,716 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 13:46:18,722 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 13:46:18,723 - openhands-litellm-proxy - INFO - Connection test successful: gpt-4-turbo
+2025-03-15 13:46:23,902 - openhands-litellm-proxy - INFO - Testing connection to gemini-pro
+2025-03-15 13:46:23,905 - openhands-litellm-proxy - ERROR - Connection test failed: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=google/gemini-pro
+ Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers
+2025-03-15 13:46:31,711 - openhands-litellm-proxy - INFO - Testing connection to gemini-pro-vision
+2025-03-15 13:46:31,714 - openhands-litellm-proxy - ERROR - Connection test failed: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=google/gemini-pro-vision
+ Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers
+2025-03-15 13:46:34,771 - openhands-litellm-proxy - INFO - Testing connection to gemini-ultra
+2025-03-15 13:46:34,774 - openhands-litellm-proxy - ERROR - Connection test failed: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=google/gemini-1.5-pro
+ Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers
+2025-03-15 13:46:37,386 - openhands-litellm-proxy - INFO - Testing connection to gpt-3.5-turbo
+2025-03-15 13:46:37,387 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-3.5-turbo; provider = openai
+2025-03-15 13:46:37,936 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 13:46:37,938 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 13:46:37,939 - openhands-litellm-proxy - INFO - Connection test successful: gpt-3.5-turbo
+Sat Mar 15 13:47:40 UTC 2025: Server stopped by user
+2025-03-15 13:48:26,545 - openhands-litellm-proxy - INFO - Starting OpenHands LiteLLM Proxy on port 54658...
+2025-03-15 13:48:26,546 - openhands-litellm-proxy - INFO - Available models: claude-3-opus, claude-3-sonnet, claude-3-haiku, gpt-4o, gpt-4-turbo, gpt-4, gpt-3.5-turbo, gemini-pro, gemini-pro-vision, gemini-ultra
+2025-03-15 13:48:26,546 - openhands-litellm-proxy - INFO - Web UI available at http://localhost:54658
+2025-03-15 13:48:26,564 - openhands-litellm-proxy - INFO - Server starting up, fetching available models...
+2025-03-15 13:48:26,565 - openhands-litellm-proxy - INFO - Fetching available Anthropic models...
+2025-03-15 13:48:26,565 - openhands-litellm-proxy - INFO - Found 9 Anthropic models
+2025-03-15 13:48:26,565 - openhands-litellm-proxy - INFO - Fetching available OpenAI models...
+2025-03-15 13:48:27,196 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2025-03-15 13:48:27,199 - openhands-litellm-proxy - INFO - Found 36 OpenAI models
+2025-03-15 13:48:27,199 - openhands-litellm-proxy - INFO - Fetching available Gemini models...
+2025-03-15 13:48:27,199 - openhands-litellm-proxy - INFO - Found 4 Gemini models
+2025-03-15 13:48:27,199 - openhands-litellm-proxy - INFO - Updated model configuration with 46 discovered models
+2025-03-15 13:49:04,257 - openhands-litellm-proxy - INFO - Testing connection to gemini-pro
+2025-03-15 13:49:04,266 - LiteLLM - INFO - 
+LiteLLM completion() model= gemini-pro; provider = gemini
+2025-03-15 13:49:04,450 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyBiT8OHjeqcbbqum6mOVUIPQK5X_F6Cgrc "HTTP/1.1 404 Not Found"
+2025-03-15 13:49:04,459 - openhands-litellm-proxy - ERROR - Connection test failed: litellm.NotFoundError: VertexAIException - {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2025-03-15 13:49:16,537 - openhands-litellm-proxy - INFO - Testing connection to gemini-1.5-pro
+2025-03-15 13:49:16,537 - LiteLLM - INFO - 
+LiteLLM completion() model= gemini-1.5-pro; provider = gemini
+2025-03-15 13:49:17,195 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyBiT8OHjeqcbbqum6mOVUIPQK5X_F6Cgrc "HTTP/1.1 200 OK"
+2025-03-15 13:49:17,197 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 13:49:17,199 - openhands-litellm-proxy - INFO - Connection test successful: gemini-1.5-pro
+2025-03-15 13:49:28,037 - openhands-litellm-proxy - INFO - Configuration updated
+2025-03-15 13:49:28,039 - openhands-litellm-proxy - INFO - Fetching available Anthropic models...
+2025-03-15 13:49:28,039 - openhands-litellm-proxy - INFO - Found 9 Anthropic models
+2025-03-15 13:49:28,039 - openhands-litellm-proxy - INFO - Fetching available OpenAI models...
+2025-03-15 13:49:28,737 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2025-03-15 13:49:28,740 - openhands-litellm-proxy - INFO - Found 36 OpenAI models
+2025-03-15 13:49:28,742 - openhands-litellm-proxy - INFO - Fetching available Gemini models...
+2025-03-15 13:49:28,743 - openhands-litellm-proxy - INFO - Found 4 Gemini models
+2025-03-15 13:49:28,743 - openhands-litellm-proxy - INFO - Updated model configuration with 46 discovered models
+2025-03-15 13:49:33,089 - openhands-litellm-proxy - INFO - Testing connection to gemini-pro
+2025-03-15 13:49:33,093 - openhands-litellm-proxy - ERROR - Connection test failed: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=google/gemini-pro
+ Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers
+2025-03-15 13:49:35,803 - openhands-litellm-proxy - INFO - Testing connection to gemini-pro-vision
+2025-03-15 13:49:35,806 - openhands-litellm-proxy - ERROR - Connection test failed: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=google/gemini-pro-vision
+ Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers
+2025-03-15 13:49:38,131 - openhands-litellm-proxy - INFO - Testing connection to gemini-ultra
+2025-03-15 13:49:38,134 - openhands-litellm-proxy - ERROR - Connection test failed: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=google/gemini-1.5-pro
+ Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers
+Sat Mar 15 13:50:58 UTC 2025: Server stopped by user
+2025-03-15 13:51:40,032 - openhands-litellm-proxy - INFO - Starting OpenHands LiteLLM Proxy on port 54658...
+2025-03-15 13:51:40,033 - openhands-litellm-proxy - INFO - Available models: claude-3-opus, claude-3-sonnet, claude-3-haiku, gpt-4o, gpt-4-turbo, gpt-4, gpt-3.5-turbo, gemini-pro, gemini-pro-vision, gemini-1.5-pro, gemini-1.5-flash
+2025-03-15 13:51:40,033 - openhands-litellm-proxy - INFO - Web UI available at http://localhost:54658
+2025-03-15 13:51:40,050 - openhands-litellm-proxy - INFO - Server starting up, fetching available models...
+2025-03-15 13:51:40,050 - openhands-litellm-proxy - INFO - Fetching available Anthropic models...
+2025-03-15 13:51:40,050 - openhands-litellm-proxy - INFO - Found 9 Anthropic models
+2025-03-15 13:51:40,050 - openhands-litellm-proxy - INFO - Fetching available OpenAI models...
+2025-03-15 13:51:40,858 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2025-03-15 13:51:40,860 - openhands-litellm-proxy - INFO - Found 36 OpenAI models
+2025-03-15 13:51:40,861 - openhands-litellm-proxy - INFO - Fetching available Gemini models...
+2025-03-15 13:51:40,861 - openhands-litellm-proxy - INFO - Found 4 Gemini models
+2025-03-15 13:51:40,861 - openhands-litellm-proxy - INFO - Updated model configuration with 46 discovered models
+Sat Mar 15 13:52:08 UTC 2025: Server stopped by user
+2025-03-15 13:52:12,538 - openhands-litellm-proxy - INFO - Starting OpenHands LiteLLM Proxy on port 54658...
+2025-03-15 13:52:12,538 - openhands-litellm-proxy - INFO - Available models: claude-3-opus, claude-3-sonnet, claude-3-haiku, gpt-4o, gpt-4-turbo, gpt-4, gpt-3.5-turbo, gemini-pro, gemini-pro-vision, gemini-1.5-pro, gemini-1.5-flash
+2025-03-15 13:52:12,538 - openhands-litellm-proxy - INFO - Web UI available at http://localhost:54658
+2025-03-15 13:52:12,557 - openhands-litellm-proxy - INFO - Server starting up, fetching available models...
+2025-03-15 13:52:12,557 - openhands-litellm-proxy - INFO - Fetching available Anthropic models...
+2025-03-15 13:52:12,557 - openhands-litellm-proxy - INFO - Found 9 Anthropic models
+2025-03-15 13:52:12,557 - openhands-litellm-proxy - INFO - Fetching available OpenAI models...
+2025-03-15 13:52:13,138 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2025-03-15 13:52:13,141 - openhands-litellm-proxy - INFO - Found 36 OpenAI models
+2025-03-15 13:52:13,141 - openhands-litellm-proxy - INFO - Fetching available Gemini models...
+2025-03-15 13:52:13,141 - openhands-litellm-proxy - INFO - Found 4 Gemini models
+2025-03-15 13:52:13,141 - openhands-litellm-proxy - INFO - Updated model configuration with 46 discovered models
+2025-03-15 13:52:47,882 - openhands-litellm-proxy - INFO - Starting OpenHands LiteLLM Proxy on port 54658...
+2025-03-15 13:52:47,882 - openhands-litellm-proxy - INFO - Available models: claude-3-opus, claude-3-sonnet, claude-3-haiku, gpt-4o, gpt-4-turbo, gpt-4, gpt-3.5-turbo, gemini-pro, gemini-pro-vision, gemini-1.5-pro, gemini-1.5-flash
+2025-03-15 13:52:47,882 - openhands-litellm-proxy - INFO - Web UI available at http://localhost:54658
+2025-03-15 13:52:47,900 - openhands-litellm-proxy - INFO - Server starting up, fetching available models...
+2025-03-15 13:52:47,900 - openhands-litellm-proxy - INFO - Fetching available Anthropic models...
+2025-03-15 13:52:47,900 - openhands-litellm-proxy - INFO - Found 9 Anthropic models
+2025-03-15 13:52:47,901 - openhands-litellm-proxy - INFO - Fetching available OpenAI models...
+2025-03-15 13:52:48,343 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2025-03-15 13:52:48,345 - openhands-litellm-proxy - INFO - Found 36 OpenAI models
+2025-03-15 13:52:48,345 - openhands-litellm-proxy - INFO - Fetching available Gemini models...
+2025-03-15 13:52:48,345 - openhands-litellm-proxy - INFO - Found 4 Gemini models
+2025-03-15 13:52:48,345 - openhands-litellm-proxy - INFO - Updated model configuration with 46 discovered models
+2025-03-15 13:52:56,563 - openhands-litellm-proxy - INFO - Starting OpenHands LiteLLM Proxy on port 54658...
+2025-03-15 13:52:56,563 - openhands-litellm-proxy - INFO - Available models: claude-3-opus, claude-3-sonnet, claude-3-haiku, gpt-4o, gpt-4-turbo, gpt-4, gpt-3.5-turbo, gemini-pro, gemini-pro-vision, gemini-1.5-pro, gemini-1.5-flash
+2025-03-15 13:52:56,569 - openhands-litellm-proxy - INFO - Web UI available at http://localhost:54658
+2025-03-15 13:52:56,587 - openhands-litellm-proxy - INFO - Server starting up, fetching available models...
+2025-03-15 13:52:56,587 - openhands-litellm-proxy - INFO - Fetching available Anthropic models...
+2025-03-15 13:52:56,587 - openhands-litellm-proxy - INFO - Found 9 Anthropic models
+2025-03-15 13:52:56,587 - openhands-litellm-proxy - INFO - Fetching available OpenAI models...
+2025-03-15 13:52:57,096 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2025-03-15 13:52:57,099 - openhands-litellm-proxy - INFO - Found 36 OpenAI models
+2025-03-15 13:52:57,099 - openhands-litellm-proxy - INFO - Fetching available Gemini models...
+2025-03-15 13:52:57,099 - openhands-litellm-proxy - INFO - Found 4 Gemini models
+2025-03-15 13:52:57,099 - openhands-litellm-proxy - INFO - Updated model configuration with 46 discovered models
+2025-03-15 13:53:04,686 - openhands-litellm-proxy - INFO - Starting OpenHands LiteLLM Proxy on port 54658...
+2025-03-15 13:53:04,686 - openhands-litellm-proxy - INFO - Available models: claude-3-opus, claude-3-sonnet, claude-3-haiku, gpt-4o, gpt-4-turbo, gpt-4, gpt-3.5-turbo, gemini-pro, gemini-pro-vision, gemini-1.5-pro, gemini-1.5-flash
+2025-03-15 13:53:04,686 - openhands-litellm-proxy - INFO - Web UI available at http://localhost:54658
+2025-03-15 13:53:04,704 - openhands-litellm-proxy - INFO - Server starting up, fetching available models...
+2025-03-15 13:53:04,704 - openhands-litellm-proxy - INFO - Fetching available Anthropic models...
+2025-03-15 13:53:04,704 - openhands-litellm-proxy - INFO - Found 9 Anthropic models
+2025-03-15 13:53:04,704 - openhands-litellm-proxy - INFO - Fetching available OpenAI models...
+2025-03-15 13:53:05,376 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2025-03-15 13:53:05,410 - openhands-litellm-proxy - INFO - Found 36 OpenAI models
+2025-03-15 13:53:05,410 - openhands-litellm-proxy - INFO - Fetching available Gemini models...
+2025-03-15 13:53:05,410 - openhands-litellm-proxy - INFO - Found 4 Gemini models
+2025-03-15 13:53:05,410 - openhands-litellm-proxy - INFO - Updated model configuration with 46 discovered models
+2025-03-15 13:53:13,130 - openhands-litellm-proxy - INFO - Starting OpenHands LiteLLM Proxy on port 54658...
+2025-03-15 13:53:13,130 - openhands-litellm-proxy - INFO - Available models: claude-3-opus, claude-3-sonnet, claude-3-haiku, gpt-4o, gpt-4-turbo, gpt-4, gpt-3.5-turbo, gemini-pro, gemini-pro-vision, gemini-1.5-pro, gemini-1.5-flash
+2025-03-15 13:53:13,134 - openhands-litellm-proxy - INFO - Web UI available at http://localhost:54658
+2025-03-15 13:53:13,152 - openhands-litellm-proxy - INFO - Server starting up, fetching available models...
+2025-03-15 13:53:13,153 - openhands-litellm-proxy - INFO - Fetching available Anthropic models...
+2025-03-15 13:53:13,153 - openhands-litellm-proxy - INFO - Found 9 Anthropic models
+2025-03-15 13:53:13,153 - openhands-litellm-proxy - INFO - Fetching available OpenAI models...
+2025-03-15 13:53:13,444 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2025-03-15 13:53:13,447 - openhands-litellm-proxy - INFO - Found 36 OpenAI models
+2025-03-15 13:53:13,447 - openhands-litellm-proxy - INFO - Fetching available Gemini models...
+2025-03-15 13:53:13,447 - openhands-litellm-proxy - INFO - Found 4 Gemini models
+2025-03-15 13:53:13,447 - openhands-litellm-proxy - INFO - Updated model configuration with 46 discovered models
+2025-03-15 13:56:45,780 - openhands-litellm-proxy - INFO - Configuration updated
+2025-03-15 13:56:45,782 - openhands-litellm-proxy - INFO - Fetching available Anthropic models...
+2025-03-15 13:56:45,782 - openhands-litellm-proxy - INFO - Found 9 Anthropic models
+2025-03-15 13:56:45,782 - openhands-litellm-proxy - INFO - Fetching available OpenAI models...
+2025-03-15 13:56:46,521 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2025-03-15 13:56:46,526 - openhands-litellm-proxy - INFO - Found 36 OpenAI models
+2025-03-15 13:56:46,526 - openhands-litellm-proxy - INFO - Fetching available Gemini models...
+2025-03-15 13:56:46,526 - openhands-litellm-proxy - INFO - Found 4 Gemini models
+2025-03-15 13:56:46,527 - openhands-litellm-proxy - INFO - Updated model configuration with 46 discovered models
+2025-03-15 13:57:28,265 - openhands-litellm-proxy - INFO - Testing connection to claude-3-opus
+2025-03-15 13:57:28,273 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-3-opus-20240229; provider = anthropic
+2025-03-15 13:57:30,324 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-15 13:57:30,326 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 13:57:30,328 - openhands-litellm-proxy - INFO - Connection test successful: claude-3-opus
+Sat Mar 15 13:57:31 UTC 2025: Server stopped by user
+2025-03-15 13:58:08,296 - openhands-litellm-proxy - INFO - Starting OpenHands LiteLLM Proxy on port 54658...
+2025-03-15 13:58:08,296 - openhands-litellm-proxy - INFO - Available models: claude-3-opus, claude-3-sonnet, claude-3-haiku, gpt-4o, gpt-4-turbo, gpt-4, gpt-3.5-turbo, gemini-pro, gemini-pro-vision, gemini-1.5-pro, gemini-1.5-flash
+2025-03-15 13:58:08,297 - openhands-litellm-proxy - INFO - Web UI available at http://localhost:54658
+2025-03-15 13:58:08,315 - openhands-litellm-proxy - INFO - Server starting up, fetching available models...
+2025-03-15 13:58:08,315 - openhands-litellm-proxy - INFO - Fetching available Anthropic models...
+2025-03-15 13:58:08,315 - openhands-litellm-proxy - INFO - Found 9 Anthropic models
+2025-03-15 13:58:08,316 - openhands-litellm-proxy - INFO - Fetching available OpenAI models...
+2025-03-15 13:58:08,915 - httpx - INFO - HTTP Request: GET https://api.openai.com/v1/models "HTTP/1.1 200 OK"
+2025-03-15 13:58:08,917 - openhands-litellm-proxy - INFO - Found 36 OpenAI models
+2025-03-15 13:58:08,917 - openhands-litellm-proxy - INFO - Fetching available Gemini models...
+2025-03-15 13:58:08,917 - openhands-litellm-proxy - INFO - Found 4 Gemini models
+2025-03-15 13:58:08,917 - openhands-litellm-proxy - INFO - Updated model configuration with 46 discovered models
+2025-03-15 17:17:04,372 - openhands-litellm-proxy - INFO - Using 46 discovered models
+2025-03-15 17:17:08,994 - openhands-litellm-proxy - INFO - Using 46 discovered models
+2025-03-15 17:17:16,838 - openhands-litellm-proxy - INFO - Configuration updated
+2025-03-15 17:17:28,534 - openhands-litellm-proxy - INFO - Using 46 discovered models
+2025-03-15 17:17:56,413 - openhands-litellm-proxy - INFO - Testing connection to claude-3-sonnet
+2025-03-15 17:17:56,422 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-3-sonnet-20240229; provider = anthropic
+2025-03-15 17:17:56,644 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 404 Not Found"
+2025-03-15 17:17:56,653 - openhands-litellm-proxy - ERROR - Connection test failed: litellm.NotFoundError: AnthropicException - {"type":"error","error":{"type":"not_found_error","message":"model: claude-3-sonnet-20240229"}}
+2025-03-15 17:18:23,155 - openhands-litellm-proxy - INFO - Testing connection to chatgpt-4o-latest
+2025-03-15 17:18:23,157 - LiteLLM - INFO - 
+LiteLLM completion() model= chatgpt-4o-latest; provider = openai
+2025-03-15 17:18:24,858 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 17:18:24,869 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 17:18:24,871 - openhands-litellm-proxy - INFO - Connection test successful: chatgpt-4o-latest
+2025-03-15 17:18:33,962 - openhands-litellm-proxy - INFO - Testing connection to gemini-pro
+2025-03-15 17:18:33,963 - LiteLLM - INFO - 
+LiteLLM completion() model= gemini-pro; provider = gemini
+2025-03-15 17:18:34,087 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyBiT8OHjeqcbbqum6mOVUIPQK5X_F6Cgrc "HTTP/1.1 404 Not Found"
+2025-03-15 17:18:34,093 - openhands-litellm-proxy - ERROR - Connection test failed: litellm.NotFoundError: VertexAIException - {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+Sat Mar 15 17:37:53 UTC 2025: Server stopped by user
+2025-03-15 17:44:27,069 - openhands-litellm-proxy - INFO - Starting OpenHands LiteLLM Proxy on port 54658...
+2025-03-15 17:44:27,069 - openhands-litellm-proxy - INFO - Available models: claude-3.7-sonnet, gpt-4-turbo, gemini-2.0-flash
+2025-03-15 17:44:27,069 - openhands-litellm-proxy - INFO - Web UI available at http://localhost:54658
+2025-03-15 17:44:27,069 - openhands-litellm-proxy - INFO - Server starting up, fetching available models...
+2025-03-15 17:44:27,069 - openhands-litellm-proxy - INFO - Fetching Anthropic model...
+2025-03-15 17:44:27,069 - openhands-litellm-proxy - INFO - Found Anthropic model: claude-3.7-sonnet
+2025-03-15 17:44:27,069 - openhands-litellm-proxy - INFO - Fetching OpenAI model...
+2025-03-15 17:44:27,069 - openhands-litellm-proxy - INFO - Found OpenAI model: gpt-4-turbo
+2025-03-15 17:44:27,069 - openhands-litellm-proxy - INFO - Fetching Gemini model...
+2025-03-15 17:44:27,069 - openhands-litellm-proxy - INFO - Found Gemini model: gemini-2.0-flash
+2025-03-15 17:44:27,069 - openhands-litellm-proxy - INFO - Updated model configuration with 3 models
+2025-03-15 17:45:09,912 - openhands-litellm-proxy - INFO - Configuration updated
+2025-03-15 17:45:12,939 - openhands-litellm-proxy - INFO - Testing connection to claude-3.7-sonnet
+2025-03-15 17:45:12,947 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-3.7-sonnet-20240620; provider = anthropic
+2025-03-15 17:45:13,190 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 404 Not Found"
+2025-03-15 17:45:13,198 - openhands-litellm-proxy - ERROR - Connection test failed: litellm.NotFoundError: AnthropicException - {"type":"error","error":{"type":"not_found_error","message":"model: claude-3.7-sonnet-20240620"}}
+2025-03-15 17:45:17,739 - openhands-litellm-proxy - INFO - Testing connection to gpt-4-turbo
+2025-03-15 17:45:17,740 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4-turbo; provider = openai
+2025-03-15 17:45:19,016 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 17:45:19,027 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 17:45:19,029 - openhands-litellm-proxy - INFO - Connection test successful: gpt-4-turbo
+2025-03-15 17:45:24,043 - openhands-litellm-proxy - INFO - Testing connection to gemini-2.0-flash
+2025-03-15 17:45:24,044 - LiteLLM - INFO - 
+LiteLLM completion() model= gemini-2.0-flash; provider = gemini
+2025-03-15 17:45:24,848 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyBiT8OHjeqcbbqum6mOVUIPQK5X_F6Cgrc "HTTP/1.1 200 OK"
+2025-03-15 17:45:24,849 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 17:45:24,850 - openhands-litellm-proxy - INFO - Connection test successful: gemini-2.0-flash
+2025-03-15 17:45:29,065 - openhands-litellm-proxy - INFO - Testing connection to claude-3.7-sonnet
+2025-03-15 17:45:29,066 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-3.7-sonnet-20240620; provider = anthropic
+2025-03-15 17:45:29,275 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 404 Not Found"
+2025-03-15 17:45:29,280 - openhands-litellm-proxy - ERROR - Connection test failed: litellm.NotFoundError: AnthropicException - {"type":"error","error":{"type":"not_found_error","message":"model: claude-3.7-sonnet-20240620"}}
+2025-03-15 17:47:26,747 - openhands-litellm-proxy - INFO - Starting OpenHands LiteLLM Proxy on port 54658...
+2025-03-15 17:47:26,747 - openhands-litellm-proxy - INFO - Available models: claude-3.7-sonnet, gpt-4-turbo, gemini-2.0-flash
+2025-03-15 17:47:26,747 - openhands-litellm-proxy - INFO - Web UI available at http://localhost:54658
+2025-03-15 17:47:26,747 - openhands-litellm-proxy - INFO - Server starting up, fetching available models...
+2025-03-15 17:47:26,747 - openhands-litellm-proxy - INFO - Fetching Anthropic model...
+2025-03-15 17:47:26,747 - openhands-litellm-proxy - INFO - Found Anthropic model: claude-3.7-sonnet
+2025-03-15 17:47:26,747 - openhands-litellm-proxy - INFO - Fetching OpenAI model...
+2025-03-15 17:47:26,747 - openhands-litellm-proxy - INFO - Found OpenAI model: gpt-4-turbo
+2025-03-15 17:47:26,747 - openhands-litellm-proxy - INFO - Fetching Gemini model...
+2025-03-15 17:47:26,747 - openhands-litellm-proxy - INFO - Found Gemini model: gemini-2.0-flash
+2025-03-15 17:47:26,747 - openhands-litellm-proxy - INFO - Updated model configuration with 3 models
+2025-03-15 17:47:44,309 - openhands-litellm-proxy - INFO - Testing connection to claude-3.7-sonnet
+2025-03-15 17:47:44,317 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-3-7-sonnet-20250219; provider = anthropic
+2025-03-15 17:47:45,334 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-15 17:47:45,337 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 17:47:45,339 - openhands-litellm-proxy - INFO - Connection test successful: claude-3.7-sonnet
+2025-03-15 17:48:39,190 - openhands-litellm-proxy - INFO - Configuration updated
+2025-03-15 17:48:40,752 - openhands-litellm-proxy - INFO - Testing connection to claude-3.7-sonnet
+2025-03-15 17:48:40,753 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-3-7-sonnet-20250219; provider = anthropic
+2025-03-15 17:48:41,263 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-03-15 17:48:41,271 - openhands-litellm-proxy - ERROR - Connection test failed: litellm.RateLimitError: AnthropicException - {"type":"error","error":{"type":"rate_limit_error","message":"This request would exceed the rate limit for your organization (c9e0c083-1137-42d9-9c8e-c4ebafaabf80) of 40,000 input tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase."}}
+2025-03-15 17:48:50,768 - openhands-litellm-proxy - INFO - Testing connection to gpt-4-turbo
+2025-03-15 17:48:50,769 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4-turbo; provider = openai
+2025-03-15 17:48:51,994 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 17:48:52,013 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 17:48:52,014 - openhands-litellm-proxy - INFO - Connection test successful: gpt-4-turbo
+2025-03-15 17:48:54,867 - openhands-litellm-proxy - INFO - Testing connection to gemini-2.0-flash
+2025-03-15 17:48:54,868 - LiteLLM - INFO - 
+LiteLLM completion() model= gemini-2.0-flash; provider = gemini
+2025-03-15 17:48:55,415 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyBiT8OHjeqcbbqum6mOVUIPQK5X_F6Cgrc "HTTP/1.1 200 OK"
+2025-03-15 17:48:55,416 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 17:48:55,417 - openhands-litellm-proxy - INFO - Connection test successful: gemini-2.0-flash
+2025-03-15 17:49:06,102 - openhands-litellm-proxy - INFO - Testing connection to gemini-2.0-flash
+2025-03-15 17:49:06,103 - LiteLLM - INFO - 
+LiteLLM completion() model= gemini-2.0-flash; provider = gemini
+2025-03-15 17:49:06,675 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyBiT8OHjeqcbbqum6mOVUIPQK5X_F6Cgrc "HTTP/1.1 200 OK"
+2025-03-15 17:49:06,677 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 17:49:06,677 - openhands-litellm-proxy - INFO - Connection test successful: gemini-2.0-flash
+2025-03-15 17:49:20,532 - openhands-litellm-proxy - INFO - Testing connection to claude-3.7-sonnet
+2025-03-15 17:49:20,533 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-3-7-sonnet-20250219; provider = anthropic
+2025-03-15 17:49:21,708 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-15 17:49:21,713 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 17:49:21,713 - openhands-litellm-proxy - INFO - Connection test successful: claude-3.7-sonnet
+2025-03-15 17:49:31,919 - openhands-litellm-proxy - INFO - Testing connection to gpt-4-turbo
+2025-03-15 17:49:31,919 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4-turbo; provider = openai
+2025-03-15 17:49:33,742 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 17:49:33,744 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 17:49:33,745 - openhands-litellm-proxy - INFO - Connection test successful: gpt-4-turbo
+2025-03-15 17:49:43,456 - openhands-litellm-proxy - INFO - Testing connection to gemini-2.0-flash
+2025-03-15 17:49:43,456 - LiteLLM - INFO - 
+LiteLLM completion() model= gemini-2.0-flash; provider = gemini
+2025-03-15 17:49:43,997 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyBiT8OHjeqcbbqum6mOVUIPQK5X_F6Cgrc "HTTP/1.1 200 OK"
+2025-03-15 17:49:43,998 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 17:49:43,999 - openhands-litellm-proxy - INFO - Connection test successful: gemini-2.0-flash
+2025-03-15 17:49:48,849 - openhands-litellm-proxy - INFO - Testing connection to claude-3.7-sonnet
+2025-03-15 17:49:48,850 - LiteLLM - INFO - 
+LiteLLM completion() model= claude-3-7-sonnet-20250219; provider = anthropic
+2025-03-15 17:49:49,764 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-15 17:49:49,765 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-03-15 17:49:49,766 - openhands-litellm-proxy - INFO - Connection test successful: claude-3.7-sonnet

@@ -1,0 +1,13 @@
+Starting OpenHands LiteLLM Proxy...
+Web UI will be available at http://localhost:54658
+API endpoint will be available at http://localhost:54658/v1
+Log file: /workspace/litellm-proxy/logs/server.log
+2025-03-15 13:21:22,124 - openhands-litellm-proxy - INFO - Starting OpenHands LiteLLM Proxy on port 54658...
+2025-03-15 13:21:22,125 - openhands-litellm-proxy - INFO - Available models: claude-3-opus, claude-3-sonnet, claude-3-haiku, gpt-4o, gpt-4-turbo, gpt-4, gpt-3.5-turbo
+2025-03-15 13:21:22,125 - openhands-litellm-proxy - INFO - Web UI available at http://localhost:54658
+INFO:     Started server process [1199]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 54658): address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.

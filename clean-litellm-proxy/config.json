@@ -1,0 +1,7 @@
+{
+  "azure_api_base": "your-azure-api-base",
+  "azure_api_key": "your-azure-api-key",
+  "azure_api_version": "2023-07-01-preview",
+  "anthropic_api_key": "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",
+  "openai_api_key": "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"
+}
